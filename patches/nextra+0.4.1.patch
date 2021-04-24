@@ -1,13 +1,13 @@
 diff --git a/node_modules/nextra/dist/loader.js b/node_modules/nextra/dist/loader.js
-index ed96dab..bd36a14 100644
+index 16e8c50..70f7a2e 100644
 --- a/node_modules/nextra/dist/loader.js
 +++ b/node_modules/nextra/dist/loader.js
-@@ -173,7 +173,7 @@ async function getPageMap(currentResourcePath) {
+@@ -97,7 +97,7 @@ async function getPageMap(currentResourcePath) {
  
      const items = (await Promise.all(files.map(async f => {
        const filePath = path.resolve(dir, f.name);
 -      const fileRoute = path.join(route, removeExtension(f.name).replace(/^index$/, ''));
 +      const fileRoute = path.join(route, removeExtension(f.name).replace(/^index$/, '')).replace(/\\/g, "/");
  
-       if (f.isDirectory()) {
-         const children = await getFiles(filePath, fileRoute);
+       if (filePath === currentResourcePath) {
+         activeRoute = fileRoute;
