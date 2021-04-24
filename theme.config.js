@@ -37,5 +37,5 @@ export default {
 
     footer: true,
     footerEditOnGitHubLink: true,
-    footerText: <>© ATLauncher 2021{new Date().getFullYear() === 2021 ? '' : ` - ${new Date().getFullYear()}`}.</>,
+    footerText: <>© ATLauncher 2021{new Date().getFullYear() === 2021 ? '' : ` - ${new Date().getFullYear()}`}</>,
 };
