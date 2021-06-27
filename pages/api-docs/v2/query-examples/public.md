@@ -1,30 +1,45 @@
 # V2 API Public Examples
 
 This page contains some example queries for the V2 GraphQL api. These are intended to be examples and as such may or may
-not be up to date. Check the [GraphQL Playground](https://api.atlauncher.com/v2/graphql/playground) for up to date
-documentation and schema.
+not be up to date. Check the [GraphQL Playground](https://api.atlauncher.com/v2/graphql) for up to date documentation
+and schema.
+
+## Check Rate Limiting
+
+This query will check your rate limiting status, including the cost for the current query.
+
+```graphql
+query {
+    rateLimit {
+        cost
+        limit
+        queryLimit
+        remaining
+        resetsIn
+    }
+}
+```
 
 ## GetPacksWithLatestVersion
 
-```js
+```graphql
 query GetPacksWithLatestVersion {
-    packs {
-        data {
+    packs(first: 10) {
+        id
+        position
+        name
+        safeName
+
+        latestVersion {
             id
-            position
-            name
-            safeName
-            latestVersion {
-                id
-                version
-                minecraftVersion
-                changelog
-                isRecommended
-                canUpdate
-                createdAt
-                updatedAt
-                publishedAt
-            }
+            version
+            minecraftVersion
+            changelog
+            isRecommended
+            canUpdate
+            createdAt
+            updatedAt
+            publishedAt
         }
     }
 }
@@ -32,25 +47,23 @@ query GetPacksWithLatestVersion {
 
 ## SearchForPackByName
 
-```js
+```graphql
 query SearchForPackByName {
-    packsSearchName(name: "test%") {
-        data {
+    searchPacks(first: 10, query: "Test", field: NAME) {
+        id
+        position
+        name
+        safeName
+        latestVersion {
             id
-            position
-            name
-            safeName
-            latestVersion {
-                id
-                version
-                minecraftVersion
-                changelog
-                isRecommended
-                canUpdate
-                createdAt
-                updatedAt
-                publishedAt
-            }
+            version
+            minecraftVersion
+            changelog
+            isRecommended
+            canUpdate
+            createdAt
+            updatedAt
+            publishedAt
         }
     }
 }
@@ -58,13 +71,14 @@ query SearchForPackByName {
 
 ## GetPackBySafeName
 
-```js
+```graphql
 query GetPackBySafeName {
-    packBySafeName(safeName: "TestPack") {
+    pack(safeName: "TestPack") {
         id
         position
         name
         safeName
+
         latestVersion {
             id
             version

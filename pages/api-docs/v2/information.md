@@ -7,7 +7,10 @@ things, as well as query for just the information you want.
 
 This is a beta at this point in time. The api structure and queries/mutation may change at any point in time. While we
 try to avoid it, it may happen. Keep an eye out on the docs and schema in the playground at
-[https://api.atlauncher.com/v2/graphql/playground](https://api.atlauncher.com/v2/graphql/playground).
+[https://api.atlauncher.com/v2/graphql](https://api.atlauncher.com/v2/graphql).
+
+Also as this is still beta, and as usage patterns and abuse is detected, we may change the complexity calculations or
+rate limits as we see fit.
 
 ## Access Levels
 
@@ -21,51 +24,67 @@ Level is limited and there are lower request allowances.
 
 ### Pack Developer Access Level
 
-This access level is available to Pack Developers only and requires an API key to access, which can be obtained in your
-Settings page of the Admin Panel. Pack Developers will have higher request allowances.
+This access level is available to Pack Developers only and requires an API key/access token to access, which can be
+obtained in your settings page of the admin panel or logged in with the login mutation. Pack Developers will have higher
+request allowances.
+
+For an example of logging into the api to get an access token, see
+[this example](/api-docs/v2/query-examples/pack-developer#login).
 
 ## Request Allowances
 
-Each level of access is limited by the number of requests they can make in a certain time period. In order to not reach
-these limits, make sure you're caching data and not fetching too often. Once your limit has been reached, you will
-receive a **429** response code and will be unable to do anything until the minute since your first request is up,
-which you can find a unix timestamp of when your time resets in the response headers. Below you can find a table
-listing the different request restrictions in place:
+Unlike the v1 api, you don't have a limit on the number of requests you can make, rather the complexity of your queries
+within a minute timeframe.
 
-| Access Level   | Max Requests Per Minute |
+See the section below on [Complexity Limits](#complexity-limits) to get an understanding of how the complexity score is
+calculated.
+
+| Access Level   | Points Limit Per Minute |
 | :------------- | :---------------------- |
-| Public         | 60                      |
-| Pack Developer | 300                     |
+| Public         | 10000                   |
+| Pack Developer | 50000                   |
 
-## Rate Limiting Headers
-
-Every request includes 4 headers to give you information about your rate limiting including the number of requests made,
-left and time until you can make more. See the table below for information on the headers:
-
-| Header Name           | What It's For                                                                                                         |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| Retry-After           | This is how many seconds to wait until you should retry your request when you hit rate limits                         |
-| X-RateLimit-Remaining | This is the number of API calls you have left based upon your rate limiting                                           |
-| X-RateLimit-Limit     | This is your rate limit and is the maximum amount of API calls you can make within a set time limit (see above table) |
-| X-RateLimit-Reset     | This is a unix timestamp for when your rate limiting will reset                                                       |
+You can query your current rate limits by querying the `rateLimit` field
+([example here](/api-docs/v2/query-examples/public#check-rate-limiting)).
 
 ## Complexity Limits
 
-When you query for information, you're limited by the complexity of your query. Each item of data that you retrieve will
-be added to the complexity score.
+When you query for information, you're limited by the complexity of your query. We calculate this based on the number
+of nodes that are returned.
 
-All queries have a complexity limit of **200** and going over that will return an error and not run your query,
+All queries have a complexity limit of **1000** and going over that will return an error and not run your query. As an
+example:
 
-When crafting queries, be sure to only request the information you actually need in order to keep the query complexity
-down.
+```graphql
+query {
+    packs(first: 10) {
+        name
+
+        versions(first: 10) {
+            version
+            minecraftVersion
+        }
+    }
+}
+```
+
+The above query would result in a query complexity of **110**.
+
+Going middle out, we're getting 10 versions for 10 packs, which is **100** total version, plus the **10** packs makes it
+a total complexity of **110**.
+
+## Max Query Depth
+
+As well as complexity limits, there is a limit to the depth that your query can go. If your query exceeds **5** levels
+of depth, it will not run and return an error.
 
 ## How To Make An API Call
 
 To make an API call, you simple need to make a POST call to
-[https://api.atlauncher.com/v2/graphql/](https://api.atlauncher.com/v2/graphql/) with the appropriate body. We have a
+[https://api.atlauncher.com/v2/graphql](https://api.atlauncher.com/v2/graphql) with the appropriate body. We have a
 playground setup that you can use to see the docs, schema as well as play around and figure out how to write and send
 queries to the api. Visit
-[https://api.atlauncher.com/v2/graphql/playground](https://api.atlauncher.com/v2/graphql/playground).
+[https://api.atlauncher.com/v2/graphql](https://api.atlauncher.com/v2/graphql).
 
 If you are a pack developer and have an API key, it can be specified by adding a **Authorization** header with the token
 as a Bearer token (for instance if your api key is 12345, the header is **Authorization: Bearer 12345**).
