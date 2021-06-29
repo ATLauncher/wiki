@@ -39,10 +39,10 @@ within a minute timeframe.
 See the section below on [Complexity Limits](#complexity-limits) to get an understanding of how the complexity score is
 calculated.
 
-| Access Level   | Points Limit Per Minute |
-| :------------- | :---------------------- |
-| Public         | 10000                   |
-| Pack Developer | 50000                   |
+| Access Level   | Points Limit Per Minute | Max Query Complexity |
+| :------------- | :---------------------- | :------------------- |
+| Public         | 10000                   | 1000                 |
+| Pack Developer | 50000                   | 5000                 |
 
 You can query your current rate limits by querying the `rateLimit` field
 ([example here](/api-docs/v2/query-examples/public#check-rate-limiting)).
@@ -52,8 +52,8 @@ You can query your current rate limits by querying the `rateLimit` field
 When you query for information, you're limited by the complexity of your query. We calculate this based on the number
 of nodes that are returned.
 
-All queries have a complexity limit of **1000** and going over that will return an error and not run your query. As an
-example:
+All queries have a max complexity limit (depending on your access level) and going over that will return an error and
+not run your query. As an example:
 
 ```graphql
 query {
