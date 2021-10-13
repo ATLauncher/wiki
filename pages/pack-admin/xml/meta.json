@@ -1,0 +1,10 @@
+{
+  "pack": "<pack>",
+  "loaders": "<loaders>",
+  "delete": "<delete>",
+  "keep": "<keep>",
+  "messages": "<messages>",
+  "warnings": "<warnings>",
+  "libraries": "<libraries>",
+  "mods": "<mods>"
+}

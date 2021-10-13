@@ -1,7 +1,7 @@
 # Libraries
 
 The libraries section of the XML tells the launcher the libraries needed in order to run. In general you should never
-need to manually add in libraries when using [loaders](/pack-admin/_xml/loaders), other mods/libraries may require
+need to manually add in libraries when using [loaders](/pack-admin/xml/loaders), other mods/libraries may require
 libraries. The only such known and used case of that is Liteloader.
 
 If you do need to add in libraries, see the syntax below:

@@ -9,7 +9,7 @@ they work and install correctly.
 ## Minecraft Forge
 
 **NOTE:** the forge mod type is now deprecated. You shouldn't be using this going forward, and instead should be making
-use of [loaders](/pack-admin/_xml/loaders).
+use of [loaders](/pack-admin/xml/loaders).
 
 Specifies that this mod file is Minecraft Forge and should be installed in the Jar or placed in the Root directory for
 Minecraft >1.6 server installs.

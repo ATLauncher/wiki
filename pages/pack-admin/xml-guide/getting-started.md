@@ -8,11 +8,11 @@ work with the XML.
 
 | Name      | XML Part      | Link                                         |
 | :-------- | :------------ | :------------------------------------------- |
-| Pack      | `<pack>`      | [More Info](/pack-admin/_xml/pack)           |
-| Loaders   | `<loaders>`   | [More Info](/pack-admin/_xml/loaders)        |
-| Delete    | `<delete>`    | [More Info](/pack-admin/_xml/delete)         |
-| Keep      | `<keep>`      | [More Info](/pack-admin/_xml/keep)           |
-| Messages  | `<messages>`  | [More Info](/pack-admin/_xml/messages)       |
-| Warnings  | `<warnings>`  | [More Info](/pack-admin/_xml/warnings)       |
-| Libraries | `<libraries>` | [More Info](/pack-admin/_xml/libraries)      |
+| Pack      | `<pack>`      | [More Info](/pack-admin/xml/pack)            |
+| Loaders   | `<loaders>`   | [More Info](/pack-admin/xml/loaders)         |
+| Delete    | `<delete>`    | [More Info](/pack-admin/xml/delete)          |
+| Keep      | `<keep>`      | [More Info](/pack-admin/xml/keep)            |
+| Messages  | `<messages>`  | [More Info](/pack-admin/xml/messages)        |
+| Warnings  | `<warnings>`  | [More Info](/pack-admin/xml/warnings)        |
+| Libraries | `<libraries>` | [More Info](/pack-admin/xml/libraries)       |
 | Mods      | `<mods>`      | [More Info](/pack-admin/xml-guide/mod-types) |
