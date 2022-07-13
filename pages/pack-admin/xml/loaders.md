@@ -16,6 +16,8 @@ we moved towards adding loader support within the ATLauncher client itself.
 This means easier configuration of loaders for you, and easier for us to maintain and update as needed, as well as more
 support for loaders as new ones come out.
 
+This was initially done for Forge 1.6.1 and newer, but now all Minecraft and Forge versions are supported.
+
 ## How to add loaders
 
 Now into how to actually add loaders to your pack.
@@ -25,7 +27,7 @@ section of your xml.
 
 ### Forge
 
-You can add a Forge loader to your pack for any Minecraft version 1.6.1 and above.
+You can add a Forge loader to your pack for any Minecraft version that supports forge.
 
 Now once you know which version of Forge you want to use
 ([https://files.minecraftforge.net](https://files.minecraftforge.net)) simply define a loader like below:
@@ -90,5 +92,43 @@ Again this is fine for development, but you may wish to use a fixed version for 
         <minecraft>1.14</minecraft>
     </pack>
     <loader type="fabric" loader="0.4.8+build.154" />
+</version>
+```
+
+### Quilt
+
+You can add a Quilt loader to your pack for any Minecraft version 1.14 and above.
+
+Now once you know which version of Quilt you want to use ([https://quiltmc.org/install/](https://quiltmc.org/install/))
+simply grab the loader version (the yarn/mappings/intermediary version doesn't matter), then define a loader like below:
+
+```xml
+<loader type="quilt" loader="0.4.8+build.154" />
+```
+
+Much like with Forge, if you want to constantly use the latest version (there is no recommended version for Fabric), you
+can do so like below:
+
+```xml
+<loader type="quilt" latest="true" />
+```
+
+Just like with Forge, you can also allow the user to select the loader version themselves:
+
+```xml
+<loader type="quilt" choose="true"/>
+```
+
+Again this is fine for development, but you may wish to use a fixed version for release.
+
+## Full example
+
+```xml
+<version>
+    <pack>
+        <version>1.0.0</version>
+        <minecraft>1.14</minecraft>
+    </pack>
+    <loader type="quilt" loader="0.4.8+build.154" />
 </version>
 ```
