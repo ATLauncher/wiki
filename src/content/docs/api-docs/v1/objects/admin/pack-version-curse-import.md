@@ -1,5 +1,6 @@
 ---
 title: Admin Pack Version Curse Import Object
+pagefind: false
 ---
 
 A Admin Pack Version Curse Import Object is an object returned from the API which contains information about a pack

@@ -1,5 +1,6 @@
 ---
 title: JSON Data String
+pagefind: false
 ---
 
 When sending requests to the API and you're asked to provide a Json Data String, you must provide a string based value

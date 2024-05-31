@@ -1,5 +1,6 @@
 ---
 title: Development Pack Version Array
+pagefind: false
 ---
 
 A Development Pack Version Array is an array returned from the API which contains simple information about a packs

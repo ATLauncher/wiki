@@ -1,5 +1,6 @@
 ---
 title: Admin Pack Object
+pagefind: false
 ---
 
 A Admin Pack Object is an object returned from the API which contains information about a pack for admins. The details

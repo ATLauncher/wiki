@@ -1,5 +1,6 @@
 ---
 title: Admin Pack File Object
+pagefind: false
 ---
 
 An Admin Pack File Object is an object returned from the API which contains information about a file/folder stored in

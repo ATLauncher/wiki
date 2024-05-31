@@ -1,5 +1,6 @@
 ---
 title: Simple Pack Object
+pagefind: false
 ---
 
 A Simple Pack Object is an object returned from the API which contains simple information about a pack. The details

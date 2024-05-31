@@ -1,5 +1,6 @@
 ---
 title: News Object
+pagefind: false
 ---
 
 A News Object is an object returned from the API which contains information about a single piece of news for the

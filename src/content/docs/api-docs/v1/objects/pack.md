@@ -1,5 +1,6 @@
 ---
 title: Pack Object
+pagefind: false
 ---
 
 A Pack Object is an object returned from the API which contains information about a pack. The details about what data

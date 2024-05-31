@@ -1,5 +1,6 @@
 ---
 title: Download Stats Object
+pagefind: false
 ---
 
 A Download Stats Object is an object returned from the API which contains information about all the downloads the

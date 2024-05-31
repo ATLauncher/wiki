@@ -1,5 +1,6 @@
 ---
 title: Pack Version Object
+pagefind: false
 ---
 
 A Pack Version Object is an object returned from the API which contains information about a pack's version. The details

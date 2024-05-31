@@ -1,5 +1,6 @@
 ---
 title: Share Code Object
+pagefind: false
 ---
 
 A Share Code Object is an object returned from the API which contains information about a share code. The details about

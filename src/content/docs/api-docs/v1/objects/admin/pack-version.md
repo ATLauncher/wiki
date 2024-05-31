@@ -1,5 +1,6 @@
 ---
 title: Admin Pack Version Object
+pagefind: false
 ---
 
 A Admin Pack Version Object is an object returned from the API which contains information about a pack's version for
