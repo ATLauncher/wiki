@@ -5,7 +5,7 @@ prev: true
 next: true
 draft: true
 sidebar:
-    order: 4
+    order: 3
 ---
 
 ....

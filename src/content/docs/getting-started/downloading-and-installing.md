@@ -4,7 +4,7 @@ description: How to download and install ATLauncher.
 prev: true
 next: true
 sidebar:
-    order: 2
+    order: 1
 ---
 
 You can always find the latest up to date links to download the latest version of ATLauncher from the

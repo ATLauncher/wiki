@@ -5,7 +5,7 @@ prev: true
 next: true
 draft: true
 sidebar:
-    order: 5
+    order: 4
 ---
 
 This page will help you download mods, resource packs, shaders and more to your instances.
