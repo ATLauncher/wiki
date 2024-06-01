@@ -18,7 +18,7 @@ You can get started downloading mods by clicking the "Add Mods" button on the in
 
 ![Add Mods To An Instance](@assets/getting-started/downloading-content/add-mods-to-an-instance.png)
 
-## Switching Between CruseForge and Modrinth
+## Switching Between CurseForge and Modrinth
 
 If you want to switch between CurseForge and Modrinth, you can do so by using the dropdown in the top left of the Add
 Mods screen.
