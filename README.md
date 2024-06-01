@@ -17,6 +17,17 @@ Then you can run `npm run dev` to start the dev server.
 Any `.md` or `.mdx` files hosted under the `src/content/docs` directory will automatically be turned into a page as
 well as be added to the sidebar.
 
+## Creating Images
+
+If you want to create images to use in the wiki, please make sure that our
+[Branding Colours](https://atlauncher.com/branding) are used where possible.
+
+For screenshots, please use our [ShareX Effect](./Background (ATLauncher).sxie) to make the screenshots look nicer and
+consistent. For any callouts such as boxes, pointers, numbers, etc, please use hex colour `#F23C3C`.
+
+All images should be saved in the `src/assets` directory, rather than the `public` directory so that they can be
+processed by Astro.
+
 ## Deployment
 
 This repository is automatically set to deploy with [Cloudflare Pages](https://pages.cloudflare.com/) to

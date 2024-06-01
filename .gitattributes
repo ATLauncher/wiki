@@ -9,3 +9,5 @@
 
 # Linux-specific files get LF line endings
 *.sh text eol=lf
+
+*.sxie binary

@@ -7,4 +7,26 @@ sidebar:
     order: 3
 ---
 
-....
+In order to use ATLauncher, you'll need to log in to your Microsoft account. This is requires in order to verify you
+have purchased the Minecraft Java Edition and to get access to be able to launch Minecraft and log you in.
+
+To log in, simply go to the Accounts tab in the launcher and then use the "Login With Microsoft" button:
+
+![Login Button](@assets/getting-started/logging-in/login-button.png)
+
+This will open a page in your browser where you can log in to your Microsoft account.
+
+Once you've logged in through your web browser, you can close the browser and return to the launcher.
+
+Once logged in you should see your account shown in the bottom of the launcher in the account switcher:
+
+![Account Switcher](@assets/getting-started/logging-in/account-switcher.png)
+
+## Deleting Your Account
+
+If you want to delete your account, you can do so by visiting the Accounts tab in the launcher and then selecting your
+account from the dropdown and then clicking the "Delete" button:
+
+![Delete Account](@assets/getting-started/logging-in/delete-account.png)
+
+This will delete your account and you will no longer be able to play any of your instances until you log in again.

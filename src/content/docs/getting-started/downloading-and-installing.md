@@ -31,9 +31,9 @@ your device. ATLauncher is safe, and Edge/Windows can be overly protective. In o
 
 Then click "Show more" and then "Keep anyway". This will let the download complete.
 
-![Install Windows Edge 1](../../../assets/getting-started/downloading-and-installing/InstallWindowsEdge1.png)
+![Install Windows Edge 1](@assets/getting-started/downloading-and-installing/InstallWindowsEdge1.png)
 
-![Install Windows Edge 2](../../../assets/getting-started/downloading-and-installing/InstallWindowsEdge2.png)
+![Install Windows Edge 2](@assets/getting-started/downloading-and-installing/InstallWindowsEdge2.png)
 </details>
 
 <details>
@@ -43,40 +43,40 @@ Click here if Windows Smart Screen is blocking the installer.
 If you do see a warning, you can click "More info" and then "Run anyway". This will allow you to continue with the
 installer:
 
-![Windows Smart Screen 1](../../../assets/getting-started/downloading-and-installing/WindowsSmartScreen1.png)
+![Windows Smart Screen 1](@assets/getting-started/downloading-and-installing/WindowsSmartScreen1.png)
 
-![Windows Smart Screen 2](../../../assets/getting-started/downloading-and-installing/WindowsSmartScreen2.png)
+![Windows Smart Screen 2](@assets/getting-started/downloading-and-installing/WindowsSmartScreen2.png)
 </details>
 
 Once the setup has run, you can click Next on the first screen:
 
-![How to install ATLauncher on Windows 1](../../../assets/getting-started/downloading-and-installing/WindowsSetup1.png)
+![How to install ATLauncher on Windows 1](@assets/getting-started/downloading-and-installing/WindowsSetup1.png)
 
 Then you can read the License Agreement, and if you accept, click the "I accept the agreement" checkbox and then hit
 "Next":
 
-![How to install ATLauncher on Windows 2](../../../assets/getting-started/downloading-and-installing/WindowsSetup2.png)
+![How to install ATLauncher on Windows 2](@assets/getting-started/downloading-and-installing/WindowsSetup2.png)
 
 On the next screen you can choose if you want to install Java or not. ATLauncher requires Java on your computer in order
 to run itself and Minecraft. By checking this box it will install a version of Java that works with the launcher and for
 Minecraft. If you already have Java installed on your computer, you can uncheck this box, but it's best to leave it
 checked:
 
-![How to install ATLauncher on Windows 3](../../../assets/getting-started/downloading-and-installing/WindowsSetup3.png)
+![How to install ATLauncher on Windows 3](@assets/getting-started/downloading-and-installing/WindowsSetup3.png)
 
 Next you can choose if you want to create a desktop shortcut to ATLauncher so you can access it from an icon on your
 desktop. If you don't want that, just uncheck it, then click "Next":
 
-![How to install ATLauncher on Windows 4](../../../assets/getting-started/downloading-and-installing/WindowsSetup4.png)
+![How to install ATLauncher on Windows 4](@assets/getting-started/downloading-and-installing/WindowsSetup4.png)
 
 Finally you'll get a summary of what will be installed. You can go back, or to proceed, click "Install":
 
-![How to install ATLauncher on Windows 5](../../../assets/getting-started/downloading-and-installing/WindowsSetup5.png)
+![How to install ATLauncher on Windows 5](@assets/getting-started/downloading-and-installing/WindowsSetup5.png)
 
 The install process will download files it needs, then once done it will show you the final screen, allowing you to
 launch ATLauncher right away and then finish and close the installer:
 
-![How to install ATLauncher on Windows 6](../../../assets/getting-started/downloading-and-installing/WindowsSetup6.png)
+![How to install ATLauncher on Windows 6](@assets/getting-started/downloading-and-installing/WindowsSetup6.png)
 
 That's it. Now you're done installing ATLauncher, you can play from the desktop icon or from your start menu at any
 time.
