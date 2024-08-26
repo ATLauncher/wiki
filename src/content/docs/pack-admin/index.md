@@ -9,7 +9,7 @@ To get a pack, visit [here](https://atlauncher.com/get-a-pack/) for the informat
 ## When You Have A Pack
 
 You will need to create an XML document to start building your pack. An explanation of this process is available on the
-[XML Guide](/pack-admin/xml-guide/getting-started) page. Login to the admin area and then go to the Versions for your pack, then edit
+[XML Guide](/pack-admin/xml-guide) page. Login to the admin area and then go to the Versions for your pack, then edit
 the dev version. Here you can paste your XML for your modpack.
 
 You can also navigate to the Files section to upload your mods.

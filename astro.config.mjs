@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
+import starlightLinksValidatorPlugin from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,7 +39,7 @@ export default defineConfig({
                     collapsed: true,
                 },
             ],
-            plugins: [starlightImageZoom()],
+            plugins: [starlightImageZoom(), starlightLinksValidatorPlugin()],
         }),
     ],
 });
