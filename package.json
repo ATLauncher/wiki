@@ -27,19 +27,19 @@
     ]
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/starlight": "^0.23.2",
-    "astro": "^4.9.2",
-    "sharp": "^0.33.4",
-    "starlight-image-zoom": "^0.5.0",
-    "typescript": "^5.4.5"
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/starlight": "^0.26.1",
+    "astro": "^4.14.5",
+    "sharp": "^0.33.5",
+    "starlight-image-zoom": "^0.8.0",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "patch-package": "^8.0.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.3"
   }
 }
