@@ -1,0 +1,48 @@
+---
+// https://github.com/withastro/starlight/discussions/965#discussioncomment-7362596
+import { getCollection } from 'astro:content';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+const allPages = await getCollection('docs');
+const slug = Astro.params.slug ?? '';
+
+const pagesToShow = allPages
+    .filter((p) => {
+        if (!p.slug.includes(slug) || p.data.draft) {
+            return false;
+        }
+
+        if (p.slug.toLocaleLowerCase().startsWith(slug)) {
+            let base = slug;
+            let pComp: string = p.slug;
+            while (base.length > 0 && pComp.toLocaleLowerCase().startsWith(base)) {
+                base = base.substring(1);
+                pComp = pComp.substring(1);
+            }
+            if (pComp.lastIndexOf('/') !== 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    })
+    .sort((a, b) => {
+        if (a.data.sidebar.order && b.data.sidebar.order) {
+            return a.data.sidebar.order - b.data.sidebar.order;
+        } else if (a.data.sidebar.order) {
+            return 0 - a.data.sidebar.order;
+        } else if (b.data.sidebar.order) {
+            return b.data.sidebar.order - 0;
+        } else {
+            return a.data.title.localeCompare(b.data.title, undefined, { sensitivity: 'base' });
+        }
+    });
+---
+
+<CardGrid>
+    {
+        pagesToShow.map((p) => (
+            <LinkCard href={'/'.concat(p.slug)} title={p.data.title} description={p.data.description} />
+        ))
+    }
+</CardGrid>

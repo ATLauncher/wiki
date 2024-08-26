@@ -1,0 +1,83 @@
+---
+title: Changing Servers Memory
+description: How to change the memory for a server.
+sidebar:
+    order: 6
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+When you create a server, the amount of memory that the server uses is usually set by default to 2GB. In order to change
+this, it depends on how the server was created.
+
+## For CurseForge Modpacks
+
+In order to change the memory allocation for CurseForge modpacks, you will need to contact the modpack creator for
+support with how to change the memory allocation for their server.
+
+As CurseForge modpacks are uploaded by the modpack creator themselves, we have no way of knowing how to change the
+memory allocation for their servers.
+
+You may try looking in the server folder for some sort of readme file or some other documentation that may help you,
+but failing that, please contact the modpack creator for support.
+
+## For Everything Else
+
+You can change the memory allocation by going to the Servers tab in the launcher and then clicking the "Open Folder"
+button:
+
+![Open Folder Button](@assets/common/server-open-folder-button.png)
+
+In the folder that opens, you can look for the `LaunchServer` script. In Windows you want the `LaunchServer.bat` file,
+for Linux/OSX you want the `LaunchServer.sh` file.
+
+### For Windows
+
+Once you've found the `LaunchServer.bat` file (note that it may just be shown as `LaunchServer` if you have file
+extensions turned off), you can open it in Notepad. You can also right click the file and click the `Edit in Notepad`
+option if it shows:
+
+![Edit in Notepad Context Menu](@assets/common/edit-in-notepad-context-menu.png)
+
+In order to change the memory allocated to the server, look for the line near the top of the file that says
+`set maxmemory=2G`:
+
+![Set Max Memory For Windows](@assets/guides/changing-servers-memory/launchserver-set-maxmemory.png)
+
+You can change the `2G` value that is there by default to whatever you want. For example, if you wanted to change the
+memory to 8GB, you would change it to `8G`:
+
+![Set Max Memory To 8GB For Windows](@assets/guides/changing-servers-memory/launchserver-set-maxmemory-8g.png)
+
+<Aside type="caution" title="Do Not Use MB or GB">
+Make sure when changing this value that you do not use MB or GB, as this will not work. You must use G for Gigabytes
+and M for Megabytes.
+</Aside>
+
+Save the file and then next time you start the server it will use the new memory allocation.
+
+### For Linux/OSX
+
+Once you've found the `LaunchServer.sh` file you can open it in any text editor. Then look for the line near the top of
+the file that says `MEMORY="2G"`:
+
+![Set Max Memory For Linux/Mac](@assets/guides/changing-servers-memory/launchserver-linux-set-memory.png)
+
+You can change the `2G` value that is there by default to whatever you want. For example, if you wanted to change the
+memory to 8GB, you would change it to `8G`:
+
+![Set Max Memory To 8GB Linux/Mac](@assets/guides/changing-servers-memory/launchserver-linux-set-memory-8g.png)
+
+<Aside type="caution" title="Do Not Use MB or GB">
+Make sure when changing this value that you do not use MB or GB, as this will not work. You must use G for Gigabytes
+and M for Megabytes.
+</Aside>
+
+Save the file and then next time you start the server it will use the new memory allocation.
+
+### What To Do If The Above Doesn't Work?
+
+<Aside type="caution" title="Where To Go For Help">
+If you cannot figure out how to change the memory allocation for a server, please visit
+[our Discord server](https://atl.pw/discord) and post a new thread in the `#support-and-questions` channel.
+</Aside>

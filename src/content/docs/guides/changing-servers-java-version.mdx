@@ -1,0 +1,89 @@
+---
+title: Changing Servers Java Version
+description: How to change the Java version for a server.
+sidebar:
+    order: 7
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+When you create a server, the Java version that is used is usually going to be correct if you launched the server from
+the launcher (unless it's a CurseForge modpack). If however you are using a CurseForge modpack, launching the server
+manually or just want to change the Java version anyway, the way in which you do it depends on how the server was
+created.
+
+## For CurseForge Modpacks
+
+In order to change the Java version for CurseForge modpacks, you will need to contact the modpack creator for support
+with how to change the Java version for their server.
+
+As CurseForge modpacks are uploaded by the modpack creator themselves, we have no way of knowing how to change the
+Java version for their servers.
+
+You may try looking in the server folder for some sort of readme file or some other documentation that may help you,
+but failing that, please contact the modpack creator for support.
+
+## For Everything Else
+
+If you launch the server through the launcher, the launcher will automatically use the correct Java version for the
+version of Minecraft that the server is using.
+
+If you are launching the server manually or through the command line and you want to use a different Java version, the
+simplest way is to uninstall all versions of Java from your computer and then install the version you want to use.
+
+Alternatively if you need to have multiple versions of Java installed, you can edit the `LaunchServer.bat` file if
+you're on Windows or the `LaunchServer.sh` file if you're on Linux/OSX as per below.
+
+### For Windows
+
+Once you've found the `LaunchServer.bat` file (note that it may just be shown as `LaunchServer` if you have file
+extensions turned off), you can open it in Notepad. You can also right click the file and click the `Edit in Notepad`
+option if it shows:
+
+![Edit in Notepad Context Menu](@assets/common/edit-in-notepad-context-menu.png)
+
+Next you can change the line near the top of the file that says `set javapath="java"` like below:
+
+![Set Java For Windows](@assets/guides/changing-servers-java-version/launchserver-set-javapath.png)
+
+You can change the `java` value that is there by default to any path to the Java executable that you want to use. For
+example, if you wanted to use Java 17 that was installed at `C:\Program Files\Java\jdk-17.0.1\bin\java.exe`:
+
+![Set Java To Java 17 For Windows](@assets/guides/changing-servers-java-version/launchserver-set-javapath-changed.png)
+
+<Aside type="caution" title="Do Not Remove The Quotes">
+Make sure to keep the quotes around the path to the Java executable otherwise it may not work.
+</Aside>
+
+If you don't already have the Java versions you want installed, you can download them from
+[Adoptium](https://adoptium.net/temurin/releases/?arch=x64&os=windows), changing the Version dropdown to the version you
+want to use, and then downloading the `JRE .msi` file:
+
+![Download Java For Windows](@assets/guides/changing-servers-java-version/download-adoptium-jre.png)
+
+### For Linux/OSX
+
+Once you've found the `LaunchServer.sh` file you can open it in any text editor. Then look for the line near the top of
+the file that says `MEMORY="2G"`:
+
+![Set Java For Linux/OSX](@assets/guides/changing-servers-java-version/launchserver-linux-set-javapath.png)
+
+You can change the `java` value that is there by default to any path to the Java executable that you want to use. For
+example, if you wanted to use Java 17 that was installed at `/usr/lib/jvm/java-17-openjdk-amd64/bin/java`:
+
+![Set Java To Java 17 For Linux/OSX](@assets/guides/changing-servers-java-version/launchserver-linux-set-javapath-changed.png)
+
+<Aside type="caution" title="Do Not Remove The Quotes">
+Make sure to keep the quotes around the path to the Java executable otherwise it may not work.
+</Aside>
+
+If you don't already have the Java versions you want installed, you can download them from
+[Adoptium](https://adoptium.net/temurin/releases/) or follow any instructions on Google for your specific operating
+system.
+
+### What To Do If The Above Doesn't Work?
+
+<Aside type="caution" title="Where To Go For Help">
+If you cannot figure out how to change the memory allocation for a server, please visit
+[our Discord server](https://atl.pw/discord) and post a new thread in the `#support-and-questions` channel.
+</Aside>

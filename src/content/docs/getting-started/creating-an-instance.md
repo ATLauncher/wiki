@@ -23,14 +23,17 @@ play, as well as giving it a name and description:
 You can optionally choose a modloader to use if you plan to install mods to the instance. Once you select the modloader,
 you can then select the version of the modloader you want to use:
 
-![Create Vanilla Instance With Modloader](@assets/getting-started/creating-an-instance/create-vanilla-instance-with-modloader.png)
+![Select a Modloader](@assets/getting-started/select-modloader.png)
 
-Then you can click the "Create Instance" button to start the install process and create the instance.
+Then you can click the "Install" button to start the install process and create the instance.
+
+Once created it will be listed in the Instances tab.
 
 ## Downloading A Premade Modpack
 
-If you want to download a premade modpack, you can do so by going to the Packs tab. You can search for a specific pack
-if you know the name, else you can browse the different platforms by using the tabs on the left side of the screen.
+If you want to download a premade modpack, such as one from ATLauncher, CurseForge or Modrinth, you can do so by going
+to the Packs tab. You can search for a specific pack if you know the name, else you can browse the different platforms
+by using the tabs on the left side of the screen.
 
 Alternatively if you don't know what you want to play, a list of all the popular packs will be shown by default when
 you visit the Packs tab.
@@ -44,3 +47,5 @@ Then you can select a name for your instance as well as picking a specific versi
 ![Download Premade Modpack Name](@assets/getting-started/creating-an-instance/download-premade-modpack-name.png)
 
 You can then click the "Install" button to start the install process and create the instance.
+
+Once created it will be listed in the Instances tab.

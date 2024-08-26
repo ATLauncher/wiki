@@ -1,0 +1,84 @@
+---
+title: Changing Servers JVM Arguments
+description: How to change the JVM arguments for a server.
+sidebar:
+    order: 8
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+When you create a server, by default there is usually no JVM arguments set. If you want to set them up, it will depend
+on how the server was created.
+
+## For CurseForge Modpacks
+
+In order to change the JVM arguments for CurseForge modpacks, you will need to contact the modpack creator for support
+with how to change the JVM arguments for their server.
+
+As CurseForge modpacks are uploaded by the modpack creator themselves, we have no way of knowing how to change the
+JVM arguments for their servers.
+
+You may try looking in the server folder for some sort of readme file or some other documentation that may help you,
+but failing that, please contact the modpack creator for support.
+
+## For Everything Else
+
+You can change the JVM arguments by going to the Servers tab in the launcher and then clicking the "Open Folder"
+button:
+
+![Open Folder Button](@assets/common/server-open-folder-button.png)
+
+In the folder that opens, you can look for the `LaunchServer` script. In Windows you want the `LaunchServer.bat` file,
+for Linux/OSX you want the `LaunchServer.sh` file.
+
+### For Windows
+
+Once you've found the `LaunchServer.bat` file (note that it may just be shown as `LaunchServer` if you have file
+extensions turned off), you can open it in Notepad. You can also right click the file and click the `Edit in Notepad`
+option if it shows:
+
+![Edit in Notepad Context Menu](@assets/common/edit-in-notepad-context-menu.png)
+
+In order to change the JVM arguments used when launching the server, look for the line near the top of the file that
+says `set jvmargs=""`:
+
+![Set JVM Arguments For Windows](@assets/guides/changing-servers-jvm-arguments/launchserver-set-jvmargs.png)
+
+You can put anything in the middle of the double quotes and that will be used when starting the Minecraft server. For
+instance to add a initial memory size of 1GB, it would look like below:
+
+![Change The JVM Arguments For Windows](@assets/guides/changing-servers-jvm-arguments/launchserver-set-jvmargs-changed.png)
+
+<Aside type="caution" title="Do Not Remove The Quotes">
+Make sure to keep the quotes around the JVM arguments otherwise it may not work.
+</Aside>
+
+Save the file and then next time you start the server it will use the new JVM arguments.
+
+### For Linux/OSX
+
+Once you've found the `LaunchServer.sh` file you can open it in any text editor. Then look for the line near the top of
+the file that says `JVMARGS=""`:
+
+![Set JVM Arguments For Linux/Mac](@assets/guides/changing-servers-jvm-arguments/launchserver-linux-set-jvmargs.png)
+
+You can put anything in the middle of the double quotes and that will be used when starting the Minecraft server. For
+instance to add a initial memory size of 1GB, it would look like below:
+
+![Change The JVM Arguments For Linux/Mac](@assets/guides/changing-servers-jvm-arguments/launchserver-linux-set-jvmargs-changed.png)
+
+<Aside type="caution" title="Do Not Remove The Quotes">
+Make sure to keep the quotes around the JVM arguments otherwise it may not work.
+</Aside>
+
+Save the file and then next time you start the server it will use the new JVM arguments.
+
+### What To Do If The Above Doesn't Work?
+
+<Aside type="caution" title="Where To Go For Help">
+If you cannot figure out how to change the JVM arguments for a server, you will need to contact the modpack creator for
+support with how to change the JVM arguments for the server.
+
+ATLauncher staff will not be able to help you with this as many servers have different ways that they manage their
+servers and how to change the JVM arguments.
+</Aside>

@@ -1,0 +1,87 @@
+---
+title: Starting a Server
+description: How to start a server.
+prev: true
+next: true
+sidebar:
+    order: 8
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Once you have [created a server](/getting-started/creating-a-server) you can start it through the launcher or you can
+start it manually.
+
+## Starting Through The Launcher
+
+To start the server, just click the "Launch" button on the server in the Servers tab.
+
+You can also choose to "Launch & Close" to close the launcher after the server has started. You can also choose to
+launch with the Minecraft server GUI by clicking the "Launch With GUI" button:
+
+![Launch Buttons](@assets/getting-started/starting-a-server/launch-buttons.png)
+
+Once you click one of the buttons, a separate window will open (usually called Terminal, cmd or PowerShell) where you
+can see the output of the server starting. Any errors and logs will be shown here, and not in the launcher.
+
+![Server Logs](@assets/getting-started/starting-a-server/server-logs.png)
+
+The first time you start a server you likely will need to accept the EULA. This will be shown in the logs. See below for
+how to accept the EULA.
+
+<Aside type="caution" title="Where To Go For Help">
+If you're having issues starting the server, try starting it manually as described below. If that doesn't work, you will
+need to contact the modpack creator for support with how to start the server.
+
+ATLauncher staff will not be able to help you with this.
+</Aside>
+
+## Starting Manually
+
+If the server is not launching through the launcher, you can start it manually by clicking the "Open Folder" button on
+the server in the Servers tab:
+
+![Open Folder Button](@assets/common/server-open-folder-button.png)
+
+This will open the server folder in your file explorer. From here you can look for a way to start the server.
+
+Usually this is a file called `LaunchServer`, `run`, `ServerStart`, `start` or `StartServer`.
+
+The first time you start a server you likely will need to accept the EULA. This will be shown in the logs. See below for
+how to accept the EULA.
+
+<Aside type="caution" title="Where To Go For Help">
+If you cannot find a script to run, or running it manually doesn't work, you will need to contact the modpack creator
+for support with how to start the server.
+
+ATLauncher staff will not be able to help you with this.
+</Aside>
+
+## Accepting The EULA
+
+If you're starting a server for the first time, you will need to accept the EULA. To do this you will need to find the
+`eula.txt` file in the server folder. You first need to open the servers folder in your file explorer:
+
+![Open Folder Button](@assets/common/server-open-folder-button.png)
+
+Then look for the `eula.txt` file.
+
+Read the file and make sure you understand what it says. If you do, then you can accept the EULA by changing the false
+in the file to true:
+
+![Accept EULA](@assets/getting-started/starting-a-server/accept-eula.png)
+
+## Allocating Memory To The Server
+
+Please read the [Changing Servers Memory](/guides/changing-servers-memory) guide for more information on how to allocate
+memory to the server.
+
+## Changing Java version
+
+Please read the [Changing Servers Java Version](/guides/changing-servers-java-version) guide for more information on how
+to change the Java version that the server uses.
+
+## Changing JVM Arguments
+
+Please read the [Changing Servers JVM Arguments](/guides/changing-servers-jvm-arguments) guide for more information on
+how to change the JVM arguments that the server uses.
