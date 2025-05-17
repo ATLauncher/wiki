@@ -8,10 +8,10 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'ATLauncher Wiki',
-            social: {
-                github: 'https://github.com/ATLauncher',
-                discord: 'https://atl.pw/discord',
-            },
+            social: [
+                { icon: 'github', label: 'GitHub', href: 'https://github.com/ATLauncher/wiki' },
+                { icon: 'discord', label: 'Discord', href: 'https://atl.pw/discord' },
+            ],
             pagination: false,
             logo: {
                 src: './src/assets/logo.svg',
